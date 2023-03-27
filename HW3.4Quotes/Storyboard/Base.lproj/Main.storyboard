@@ -26,33 +26,58 @@
                                 <rect key="frame" x="186.66666666666666" y="221" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmw-lT-Qeg">
-                                <rect key="frame" x="96.666666666666686" y="733" width="200" height="35"/>
+                                <rect key="frame" x="46.666666666666657" y="733.66666666666663" width="300" height="34.333333333333371"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="217-UZ-WtA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="217-UZ-WtA"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Quotes">
+                                <buttonConfiguration key="configuration" style="plain" title="Next quote">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionQuoteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="puz-Cd-6kA"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="fec-mu-pgQ">
+                                <rect key="frame" x="20" y="401" width="353" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGG-sC-92b">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgH-xx-MJU">
+                                        <rect key="frame" x="0.0" y="78" width="353" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ecL-00-SCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="24d-4G-YBw"/>
                             <constraint firstItem="Vmw-lT-Qeg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8fs-xf-i7j"/>
+                            <constraint firstItem="fec-mu-pgQ" firstAttribute="top" secondItem="ecL-00-SCJ" secondAttribute="bottom" constant="20" id="C2c-fe-EBv"/>
+                            <constraint firstItem="fec-mu-pgQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JHf-EM-Il8"/>
                             <constraint firstItem="ecL-00-SCJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="OlH-7M-GO8"/>
                             <constraint firstItem="Zik-ea-th8" firstAttribute="centerX" secondItem="ecL-00-SCJ" secondAttribute="centerX" id="STm-1N-6xg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ecL-00-SCJ" secondAttribute="trailing" constant="20" id="VdM-0P-MnB"/>
                             <constraint firstItem="Zik-ea-th8" firstAttribute="centerY" secondItem="ecL-00-SCJ" secondAttribute="centerY" id="h2a-OH-TOg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vmw-lT-Qeg" secondAttribute="bottom" constant="50" id="o4I-VZ-xH5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fec-mu-pgQ" secondAttribute="trailing" constant="20" id="ues-8T-hK9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="Zik-ea-th8" id="JJ7-Gh-1c4"/>
+                        <outlet property="namePersonLabel" destination="UGG-sC-92b" id="VXW-rf-sgM"/>
                         <outlet property="quotesButton" destination="Vmw-lT-Qeg" id="IKq-G1-AOC"/>
                         <outlet property="quotesImage" destination="ecL-00-SCJ" id="vZF-p2-hMh"/>
+                        <outlet property="quotesLabel" destination="RgH-xx-MJU" id="xbM-Ka-MuM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
